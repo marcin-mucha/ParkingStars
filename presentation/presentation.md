@@ -14,20 +14,20 @@
 ---
 
 # Solution YOU want!
-✓ Equality
 ✓ Sustainability
-✓ Fair
+✓ Equality
+✓ Fairness
 ✓ Diversity
-✓ Fast and easy access
-✓ All platforms support (iOS, iPadOS, macOS)
+✓ Accessible for all platforms (iOS, iPadOS, macOS)
 
 ---
 
-# It's that easy!
+# ✓ It's that easy!
 
 ---
 
 # ParkingStars
+![](./img/park.jpg)
 
 ---
 
