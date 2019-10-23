@@ -17,7 +17,14 @@ struct BetRowView: View {
             } else {
                 Image(systemName: "xmark.circle")
             }
-            Text(model.bet.bettor.name)
+            
+            if model.isUser {
+                Text(model.bet.bettor.name)
+                    .bold()
+            } else {
+                Text(model.bet.bettor.name)
+            }
+
             Spacer()
             Text("⭐️ \(model.bet.value)")
         }
@@ -27,7 +34,7 @@ struct BetRowView: View {
 
 struct BetRowView_Previews: PreviewProvider {
     static var previews: some View {
-        BetRowView(model: BetRowModel(bet: Bet(id: 1, value: 10, bettor: Bettor(id: "1", name: "Michał Apanowicz", stack: 400), date: Date()), isWinning: true))
+        BetRowView(model: BetRowModel(bet: Bet(id: 1, value: 10, bettor: Bettor(id: "1", name: "Michał Apanowicz", stack: 400), date: Date()), isWinning: true, isUser: true))
         .previewLayout(PreviewLayout.fixed(width: 375, height: 100))
     }
 }
@@ -39,6 +46,7 @@ struct BetRowModel: Identifiable {
     
     let bet: Bet
     let isWinning: Bool
+    let isUser: Bool
 }
 
 extension BetRowModel {

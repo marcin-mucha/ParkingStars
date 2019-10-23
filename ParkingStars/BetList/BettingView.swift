@@ -33,7 +33,13 @@ struct BettingView: View {
             Button(action: {
                 
             }, label: {
-                Text("Bet")
+                Button(action: {
+                    do {
+                        try self.store.createUserBet(value: self.betValue)
+                    } catch {
+                        Alert(title: Text("Error").bold(), message: Text("Upss..."), dismissButton: Alert.Button.cancel())
+                    }
+                }, label: { Text("Bet")
                     .foregroundColor(.white)
                     .font(.system(size: 60))
                     .fontWeight(.bold)
@@ -41,6 +47,7 @@ struct BettingView: View {
                     .padding(.vertical, 16)
                     .background(Color.green)
                     .cornerRadius(14)
+                })
             })
         }
         .navigationBarTitle("Your Bet")

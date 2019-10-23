@@ -18,7 +18,7 @@ struct ContentView: View {
                     .fontWeight(.thin)
                 List {
                     ForEach(store.output.enumerated().compactMap { index, bet in
-                        return BetRowModel(bet: bet, isWinning: (index < numberOfParkingSlots))
+                        return BetRowModel(bet: bet, isWinning: (index < numberOfParkingSlots), isUser: store.user.id == bet.bettor.id)
                     }) { model in
                         BetRowView(model: model)
                     }
@@ -34,11 +34,15 @@ struct ContentView: View {
                         .cornerRadius(14)
                 })
             }
-        .navigationBarItems(leading: Button(action: {}, label: { Text("Choose day") } ), trailing: Text("Wallet: ⭐️400"))
-        .navigationBarTitle("ParkingStars")
+            .sheet(isPresented: $store.isAuctionFinished) {
+                EndAuctionView(model: EndAuctionModel.make(from: self.store))
+            }
+            .navigationBarItems(leading: Button(action: {}, label: { Text("Choose day") } ), trailing: Text("Wallet: ⭐️\(store.user.stack)"))
+            .navigationBarTitle("ParkingStars")
         }
         .onAppear {
             self.store.startGenerating()
+            self.store.scheduleFinish()
         }
     }
 }
