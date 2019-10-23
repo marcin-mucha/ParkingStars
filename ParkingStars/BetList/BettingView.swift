@@ -26,14 +26,20 @@ struct BettingView: View {
                 Text("\(betValue)")
                     .font(.system(size: 60))
                     .fontWeight(.bold)
-                Stepper(value: $betValue, in: store.minimumBetPossible...400, step: 10) { Text("Bet by 10") }
-                Stepper(value: $betValue, in: store.minimumBetPossible...400, step: 1) { Text("Bet by 1") }
+                Stepper(value: $betValue, in: store.minimumBetPossible...400, step: 10) { Text("Raise 10") }
+                Stepper(value: $betValue, in: store.minimumBetPossible...400, step: 1) { Text("Raise 1") }
             }
             Spacer()
             Button(action: {
                 
             }, label: {
-                Text("Bet")
+                Button(action: {
+                    do {
+                        try self.store.createUserBet(value: self.betValue)
+                    } catch {
+                        Alert(title: Text("Error").bold(), message: Text("Upss..."), dismissButton: Alert.Button.cancel())
+                    }
+                }, label: { Text("Bet")
                     .foregroundColor(.white)
                     .font(.system(size: 60))
                     .fontWeight(.bold)
@@ -41,6 +47,7 @@ struct BettingView: View {
                     .padding(.vertical, 16)
                     .background(Color.green)
                     .cornerRadius(14)
+                })
             })
         }
         .navigationBarTitle("Your Bet")

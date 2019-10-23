@@ -19,8 +19,11 @@ final class AuctionStore: ObservableObject {
     }
     
     private var bets = CurrentValueSubject<[Bet], Never>([])
+
+    private(set) var user = Bettor(id: "6966642", name: "Marcin Mucha FTW", stack: 400)
     
     @Published var output: [Bet] = []
+    @Published var isAuctionFinished = false
     var minimumBetPossible: Int {
         return bets.value.minimumWinningValue
     }
@@ -40,7 +43,11 @@ final class AuctionStore: ObservableObject {
         newBets.append(newBet)
         bets.value = newBets.sorted(by: { $0.isGreater(than: $1) })
     }
-    
+
+    func createUserBet(value: Int) throws {
+        try createBet(value: value, bettor: user)
+    }
+
     func startGenerating() {
         AuctionDay.bettors.forEach { bettor in
             let delay: TimeInterval = Double.random(in: 2...10)
@@ -57,6 +64,21 @@ final class AuctionStore: ObservableObject {
                 }
             }
         }
+    }
+
+    func scheduleFinish() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 35) {
+            self.isAuctionFinished = true
+
+            // Clean user wallet
+            if let userBet = self.userWiningBet {
+                self.user = Bettor(id: self.user.id, name: self.user.name, stack: self.user.stack - userBet.value)
+            }
+        }
+    }
+
+    var userWiningBet: Bet? {
+        return self.bets.value.prefix(numberOfParkingSlots).first(where: { $0.bettor.id == self.user.id })
     }
 }
 

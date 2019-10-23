@@ -19,6 +19,7 @@
 		92688A29236067B900F26043 /* BetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92688A28236067B900F26043 /* BetRowView.swift */; };
 		92C4888A23607A4100AFA43E /* BettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4888923607A4100AFA43E /* BettingView.swift */; };
 		92C4888C2360805700AFA43E /* AuctionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4888B2360805700AFA43E /* AuctionStore.swift */; };
+		B8CEC86B2360CB8800566DE4 /* EndAuctionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CEC86A2360CB8800566DE4 /* EndAuctionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		92688A28236067B900F26043 /* BetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetRowView.swift; sourceTree = "<group>"; };
 		92C4888923607A4100AFA43E /* BettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BettingView.swift; sourceTree = "<group>"; };
 		92C4888B2360805700AFA43E /* AuctionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionStore.swift; sourceTree = "<group>"; };
+		B8CEC86A2360CB8800566DE4 /* EndAuctionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndAuctionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				922E92D323603DAB006C86C1 /* Preview Content */,
 				922E92EF23603ED2006C86C1 /* Model */,
 				92C4888B2360805700AFA43E /* AuctionStore.swift */,
+				B8CEC86A2360CB8800566DE4 /* EndAuctionView.swift */,
 			);
 			path = ParkingStars;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				922E92CE23603DA8006C86C1 /* SceneDelegate.swift in Sources */,
 				92C4888A23607A4100AFA43E /* BettingView.swift in Sources */,
 				922E92F423604506006C86C1 /* UIImage+Extension.swift in Sources */,
+				B8CEC86B2360CB8800566DE4 /* EndAuctionView.swift in Sources */,
 				92C4888C2360805700AFA43E /* AuctionStore.swift in Sources */,
 				922E92F123604420006C86C1 /* ContentView.swift in Sources */,
 				922E92EE23603E85006C86C1 /* Slot.swift in Sources */,
