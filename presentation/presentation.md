@@ -18,11 +18,16 @@
 ✓ Sustainability
 ✓ Fair
 ✓ Diversity
-✓ Support all platforms (iOS, iPadOS, macOS)
+✓ Fast and easy access
+✓ All platforms support (iOS, iPadOS, macOS)
 
 ---
 
 # It's that easy!
+
+---
+
+# ParkingStars
 
 ---
 
@@ -44,7 +49,7 @@
 
 ---
 
-## Your unused stars stays with you. FOREVER!
+## Your unused stars stay with you. FOREVER!
 
 ---
 
@@ -64,15 +69,16 @@
 
 # HackDay Team:
 Marcin Mucha & Michał Apanowicz
-# Super expensive consultant
+# Super valuable consultant
 Mirosław Filip
 # YES WE ARE HIRING!
 
 ---
 
-# VOTE FOR PARKING STARS
+# VOTE FOR ParkingStars
 Marcin Mucha | Michał Apanowicz
 Mirosław Filip (Consulting)
+
 # LET'S MAKE PARKING AMERICAN AGAIN!
 
 ![](./img/hero.png)
