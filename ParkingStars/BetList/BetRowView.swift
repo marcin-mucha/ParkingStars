@@ -27,6 +27,7 @@ struct BetRowView: View {
 
             Spacer()
             Text("⭐️ \(model.bet.value)")
+                .fontWeight(.medium)
         }
         .listRowBackground(model.rowColor)
     }

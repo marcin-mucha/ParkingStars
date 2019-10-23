@@ -21,12 +21,17 @@ struct EndAuctionView: View {
                             .resizable()
                             .foregroundColor(Color.green)
                             .frame(width: 100, height: 100)
-                        Text("Congtatulations!")
-                            .font(.title )
+                        Text("Congratulations!")
+                            .font(.system(size: 40))
+                            .fontWeight(.bold)
                             .lineLimit(1)
-                        Text("You can use spot P002 tomorrow.\nYou paid \(model.value)⭐️")
-                            .font(.body)
-                            .lineLimit(2)
+                            .padding(.bottom)
+                        Text("You can use spot P002 tomorrow.")
+                            .padding(.bottom)
+                        Text("You paid:")
+                        Text("⭐️\(model.value)")
+                            .fontWeight(.bold)
+                            .font(.system(size: 40))
                     }
 
                 } else {
