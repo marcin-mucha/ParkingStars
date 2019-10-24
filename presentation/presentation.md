@@ -1,4 +1,6 @@
 
+![](./img/cat.png)
+
 ---
 
 # We are living the dream...
@@ -62,7 +64,7 @@
 
 ---
 
-# Live Demo
+# Demo
 ![](./img/dino.jpg)
 
 ---
