@@ -24,7 +24,7 @@ struct ContentView: View {
                     }
                 }
                 NavigationLink(destination: BettingView(store: store), label: {
-                    Text("BET!")
+                    Text("BID!")
                         .foregroundColor(.white)
                         .font(.title)
                         .fontWeight(.bold)
@@ -37,8 +37,12 @@ struct ContentView: View {
             .sheet(isPresented: $store.isAuctionFinished) {
                 EndAuctionView(model: EndAuctionModel.make(from: self.store))
             }
-            .navigationBarItems(leading: Button(action: {}, label: { Text("Choose day") } ), trailing: Text("Wallet: ⭐️\(store.user.stack)"))
-            .navigationBarTitle("ParkingStars")
+            .navigationBarItems(leading: Button(action: {}, label: {
+                Text("Choose day") } ), trailing:
+                Text("Wallet: ⭐️\(store.user.stack)")
+                    .fontWeight(.thin)
+            )
+                .navigationBarTitle("ParkingStars")
         }
         .onAppear {
             self.store.startGenerating()

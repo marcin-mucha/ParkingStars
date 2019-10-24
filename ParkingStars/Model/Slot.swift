@@ -62,22 +62,23 @@ extension AuctionDay {
     ])
     
     static let bettors = [
-        Bettor(id: "123", name: "Michał Apanowicz", stack: 400),
-        Bettor(id: "124", name: "Jacek Kwiecień", stack: 340),
-        Bettor(id: "125", name: "Marcin Mucha", stack: 240),
-        Bettor(id: "126", name: "Artur Glier", stack: 150),
-        Bettor(id: "127", name: "Iwo Polański", stack: 400),
-        Bettor(id: "128", name: "Patryk Zięba", stack: 340),
-        Bettor(id: "129", name: "Paulina Kowalska", stack: 240),
-        Bettor(id: "130", name: "Filip Misztal", stack: 150),
-        Bettor(id: "131", name: "Rafał Wójcik", stack: 400),
-        Bettor(id: "132", name: "Rafał Adamek", stack: 340),
-        Bettor(id: "133", name: "Katarzyna Głąb", stack: 240),
-        Bettor(id: "134", name: "Przemysław Petka", stack: 150),
-        Bettor(id: "135", name: "Sebastian Łosiński", stack: 400),
-        Bettor(id: "136", name: "Konard Pietrzkiewicz", stack: 340),
-        Bettor(id: "137", name: "Michał Matoga", stack: 240),
-        Bettor(id: "138", name: "Maciej Walczyński", stack: 150)
+        Bettor(id: "123", name: "Andrzej", stack: 100),
+        Bettor(id: "124", name: "Janusz", stack: 89),
+        Bettor(id: "125", name: "Marcin Mucha", stack: 123),
+        Bettor(id: "126", name: "Adam", stack: 114),
+        Bettor(id: "127", name: "Tomasz", stack: 116),
+        Bettor(id: "128", name: "Bronisław", stack: 147),
+        Bettor(id: "129", name: "Donald", stack: 13),
+        Bettor(id: "130", name: "Pszemek", stack: 78),
+
+        Bettor(id: "131", name: "Marysia", stack: 89),
+        Bettor(id: "132", name: "Kasia", stack: 100),
+        Bettor(id: "133", name: "Ola", stack: 10),
+        Bettor(id: "134", name: "Zuzia", stack: 21),
+        Bettor(id: "135", name: "Antonina", stack: 123),
+        Bettor(id: "136", name: "Lucyna", stack: 32),
+        Bettor(id: "137", name: "Ela", stack: 24),
+        Bettor(id: "138", name: "Ula", stack: 138)
     ]
 }
 

@@ -11,23 +11,25 @@ import SwiftUI
 struct BettingView: View {
     @State var betValue: Int = 0
     @ObservedObject var store: AuctionStore
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showingAlert = false
     
     var body: some View {
         VStack {
             VStack(alignment: .center) {
                 Spacer()
-                Text("Highest bet: ⭐️ \(store.output.first?.value ?? 0)")
+                Text("Highest bid: ⭐️ \(store.output.first?.value ?? 0)")
                     .font(.subheadline)
                     .lineLimit(1)
                 Spacer()
-                Text("Bet amount:")
+                Text("Bid amount:")
                     .fontWeight(.thin)
                     .font(.title)
                 Text("\(betValue)")
                     .font(.system(size: 60))
                     .fontWeight(.bold)
-                Stepper(value: $betValue, in: store.minimumBetPossible...400, step: 10) { Text("Raise 10") }
-                Stepper(value: $betValue, in: store.minimumBetPossible...400, step: 1) { Text("Raise 1") }
+                Stepper(value: $betValue, in: store.minimumBetPossible...500, step: 10) { Text("Raise 10") }
+                Stepper(value: $betValue, in: store.minimumBetPossible...500, step: 1) { Text("Raise 1") }
             }
             Spacer()
             Button(action: {
@@ -36,10 +38,11 @@ struct BettingView: View {
                 Button(action: {
                     do {
                         try self.store.createUserBet(value: self.betValue)
+                        self.presentationMode.wrappedValue.dismiss()
                     } catch {
-                        Alert(title: Text("Error").bold(), message: Text("Upss..."), dismissButton: Alert.Button.cancel())
+                        self.showingAlert = true
                     }
-                }, label: { Text("Bet")
+                }, label: { Text("BID!")
                     .foregroundColor(.white)
                     .font(.system(size: 60))
                     .fontWeight(.bold)
@@ -50,10 +53,13 @@ struct BettingView: View {
                 })
             })
         }
-        .navigationBarTitle("Your Bet")
+        .navigationBarTitle("Your bid")
         .padding(.horizontal, 16)
         .onAppear {
             self.betValue = self.store.minimumBetPossible
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Error").bold(), message: Text("Upss..."), dismissButton: Alert.Button.cancel())
         }
     }
 }

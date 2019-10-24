@@ -20,7 +20,7 @@ final class AuctionStore: ObservableObject {
     
     private var bets = CurrentValueSubject<[Bet], Never>([])
 
-    private(set) var user = Bettor(id: "6966642", name: "Marcin Mucha FTW", stack: 400)
+    private(set) var user = Bettor(id: "6966642", name: "Michał Apanowicz", stack: 500)
     
     @Published var output: [Bet] = []
     @Published var isAuctionFinished = false
@@ -50,7 +50,7 @@ final class AuctionStore: ObservableObject {
 
     func startGenerating() {
         AuctionDay.bettors.forEach { bettor in
-            let delay: TimeInterval = Double.random(in: 2...10)
+            let delay: TimeInterval = Double.random(in: 2...25)
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
                 guard let self = self else { return }
                 let minimumValue = self.bets.value.minimumWinningValue
@@ -67,7 +67,7 @@ final class AuctionStore: ObservableObject {
     }
 
     func scheduleFinish() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 35) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 25) {
             self.isAuctionFinished = true
 
             // Clean user wallet
