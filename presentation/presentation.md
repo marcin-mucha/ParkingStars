@@ -8,7 +8,7 @@
 
 ---
 
-# But every dream need to end.
+# But every dream needs to end.
 ![](./img/parking.jpeg)
 
 ---
@@ -20,7 +20,7 @@
 ✓ Equality
 ✓ Fairness
 ✓ Diversity
-✓ Accessible for all platforms (iOS, iPadOS, macOS)
+✓ Accessibility - all platforms (iOS, iPadOS, macOS)
 
 ---
 
@@ -33,11 +33,11 @@
 
 ---
 
-# 500 stars
+# ⭐️ 500 stars
 
 ---
 
-# BID! BID! BID! BID! BID! BID! BID! BID! BID!
+# BID! BID! BID! BID! BID! BID! BID! BID! BID! BID! BID! BID!
 ![](./img/things.jpg)
 
 ---
@@ -69,18 +69,21 @@
 
 ---
 
-# HackDay Team:
-Marcin Mucha & Michał Apanowicz
-# Super valuable consultant
-Mirosław Filip
-# YES WE ARE HIRING!
+![center autoplay fit](./demo.MP4)
+
+---
+
+HackDay Team
+## Marcin Mucha & Michał Apanowicz
+
+Consultants
+## Iwo Polański 🌴 & Mirosław Filip 🧠
+
+## YES WE ARE HIRING!
+![](./img/hero.png)
 
 ---
 
 # VOTE FOR ParkingStars
-Marcin Mucha | Michał Apanowicz
-Mirosław Filip (Consulting)
-
-# LET'S MAKE PARKING AMERICAN AGAIN!
-
-![](./img/hero.png)
+## Vote for us is ⭐️500 for you!*
+*Screenshot evidence needed
